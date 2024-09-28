@@ -24,4 +24,4 @@ Display the fetched data using a chart (like a bar chart) on the Chart Screen.
 
 Instructions:
 
-Run the command flutter run in the terminal to see the output of this code.
+Run the command "flutter run" in the terminal to see the output of this code.
