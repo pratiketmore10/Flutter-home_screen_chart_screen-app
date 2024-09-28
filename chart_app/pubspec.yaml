@@ -1,0 +1,22 @@
+name: home_to_chart_screen_flutter_app
+description: A new Flutter project.
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.5.0 <4.0.0"  # Added SDK constraint
+
+dependencies:
+  flutter:
+    sdk: flutter
+  go_router: ^14.2.8  # Your other dependencies
+  charts_flutter: ^0.12.0 
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
