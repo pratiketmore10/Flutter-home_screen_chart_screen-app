@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:charts_flutter/flutter.dart' as charts;
-import 'simple_bar_chart.dart'; // Ensure this import is correct
+import 'simple_bar_chart.dart';
+import 'package:go_router/go_router.dart';
 
 class ChartScreen extends StatelessWidget {
   @override
@@ -11,8 +12,22 @@ class ChartScreen extends StatelessWidget {
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
-        child: SimpleBarChart(
-          _createSampleData(),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            ElevatedButton(
+              onPressed: () {
+                context.go('/');
+              },
+              child: Text('Go to Home Screen'),
+            ),
+            SizedBox(height: 20),
+            Expanded(
+              child: SimpleBarChart(
+                _createSampleData(),
+              ),
+            ),
+          ],
         ),
       ),
     );
@@ -20,10 +35,14 @@ class ChartScreen extends StatelessWidget {
 
   static List<charts.Series<OrdinalSales, String>> _createSampleData() {
     final data = [
-      OrdinalSales('2017', 5),
-      OrdinalSales('2018', 25),
-      OrdinalSales('2019', 100),
-      OrdinalSales('2020', 75),
+      OrdinalSales('2017', 450),
+      OrdinalSales('2018', 678),
+      OrdinalSales('2019', 698),
+      OrdinalSales('2020', 784),
+      OrdinalSales('2021', 884),
+      OrdinalSales('2022', 684),
+      OrdinalSales('2023', 984),
+      OrdinalSales('2024', 765),
     ];
 
     return [
